@@ -14,6 +14,16 @@ namespace CSharpExtensionMethods
 
             Console.WriteLine($"Numeric Result: {numresult.Add(num1, num2)}");
             Console.WriteLine($"Numeric Result: {stringResult.Add(str1, str2)}");
+
+
+            /* ====================================================================
+             * String to secure string
+             * ==================================================================*/
+            string plainString = "password12345";
+            var secureString = plainString.ToSecureString();
+
+            Console.WriteLine(secureString.ToString());
+            secureString.Dispose();
         }
     }
 }
